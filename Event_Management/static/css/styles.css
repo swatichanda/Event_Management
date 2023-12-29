@@ -1,0 +1,149 @@
+/* Reset some default styles
+html, body, div, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    color: #ff5733; /* Change the color of the active link */
+}
+
+/* Style the main content */
+main {
+    padding: 20px;
+}
+
+.content img {
+    width: 100%;
+    max-height: 400px; /* Adjust the max height as needed */
+}
+
+/* Style the logos section */
+.main-logos-solutions {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-logos-solutions h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.inner-logo img {
+    max-width: 100px; /* Adjust the max width as needed */
+    height: auto;
+    margin: 10px;
+}
+
+/* Style the event solutions section */
+.host-event-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.host-event-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the "Why Host With Us" section */
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style the featured services */
+.five-col {
+    width: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.five-images img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the customer reviews section */
+.logo-header h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sem-g2-inner-list {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.sem-g2-inner-list h6 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sem-g2-inner-list span {
+    color: #888;
+}
+
+/* Style the call-to-action section */
+.request-a-demo-section {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.request-a-demo-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.request-a-demo-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d44024; /* Darker color on hover */
+} 

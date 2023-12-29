@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>Event Management System</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<style>
+    /* Reset some default styles */
+    html, body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, h1, form, label, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color:#f58e11;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid #fff;
+}
+    
+/* Style the main content */
+main {
+    padding: 20px;
+}
+
+.content img {
+    width: 100%;
+    max-height: 900px; 
+} 
+
+/* logos code */
+.tab-content-logo {
+  display: flex;
+  overflow-x: auto; 
+  padding: 10px 0; 
+}
+
+/* Style each individual logo item */
+.inner-logo {
+  flex: 0 0 auto;
+  margin-right: 10px; 
+}
+
+/* Optional: Style the images inside each logo item*/
+.inner-logo img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+} 
+
+/* Style the event solutions section 
+.host-event-section {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.host-event-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the "Why Host With Us" section 
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Style the customer reviews section
+.logo-header h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sem-g2-inner-list {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.sem-g2-inner-list h6 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sem-g2-inner-list span {
+    color: #888;
+}
+
+/* Style the call-to-action section 
+.request-a-demo-section {
+    max-width: 1000px;
+    border-radius:12px;
+    margin-top:100px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0px auto 0px;
+    padding: 81px 0 100px;
+    background-color: rgb(240, 99, 6);
+}
+
+.request-a-demo-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(19, 18, 18);
+}
+
+.request-a-demo-section p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: whitesmoke;
+    color: #da622a;
+    padding: 10px 20px;
+    /* text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    /* transition: background-color 0.3s; 
+}
+
+
+/* for services */
+/* Style the container of the horizontal list 
+.main-five {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping onto multiple lines 
+  overflow-x: auto; /* Add horizontal scroll if necessary 
+  padding: 0; /* Remove default padding 
+}
+
+Style each list item
+.five-col {
+  flex: 0 0 auto; 
+  margin-right: 10px; 
+  list-style: none
+}
+
+/* Optional: Style the images inside each list item 
+.five-images img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ddd; /* Add a border around each image 
+}*/
+</style>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="/" class="active">Home</a>
+            <a href="/events">Events</a>
+            <a href="/about">About</a>
+            <a href="/booking">Booking</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+            <a href="/signup">Signup</a>
+        </div>
+    </nav>
+    <main>
+        <div class="content" style="height: 50%;">
+            <img src="{% static "images/event background.jpg" %}">
+        </div>
+        <div class="main-logos-solutions customer-logos-top adjust-logos">
+            <div class="row">
+                <h3>The World’s Most Innovative Companies Find Event Success With vFairs</h3>
+                <div class="tab-content-logo clearfix desktop-logos">
+                    <div id="24026" class="inner-logo ">
+                        <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2023/01/SAP.png"
+                            alt="SAP logo" />
+                    </div>
+                    <div id="24027" class="inner-logo ">
+                        <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2023/01/salesforce.png"
+                            alt="Salesforce logo" />
+                    </div>
+                    <div id="24028" class="inner-logo ">
+                        <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2023/01/Nestle-1.png"
+                            alt="Nestle logo" />
+                    </div>
+                    <div id="24029" class="inner-logo ">
+                        <img loading="lazy"
+                            src="https://www.vfairs.com/wp-content/uploads/2023/01/Cornell-University-logo-2.png"
+                            alt="Cornell University logo" />
+                    </div>
+                    <div id="24031" class="inner-logo ">
+                        <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2023/01/abbot.png"
+                            alt="Abbot logo" />
+                    </div>
+                    <div id="24032" class="inner-logo ">
+                        <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2023/01/t-mobile.png"
+                            alt="T-Mobile logo" />
+                    </div>
+                    <div class="inner-logo ">
+                        <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2023/06/Harbor-1-1.png"
+                            alt="Harbor logo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="host-event-section videos-solution-section-main tab-header virual-event-features">
+            <div class="row">
+                <h2>Enhance Any Event with vFairs Streamlined All-in-One Event Solution</h2>
+                <p class="sub-heading">Efficiently plan, create, advertise, execute, and assess your event with vFair
+                    event management platform. Our solution is fully customizable and is supported by excellent customer
+                    service with 1500+ 5-star reviews.</p>
+            </div>
+        </div>
+        <div>
+            <h2>Why Host With Us</h2>
+            <p>vFairs event management platform is the perfect solution for anyone looking to host a successful event,
+                regardless of its size. This includes custom mobile apps and onsite solutions, as well as the ability to
+                host immersive virtual events that will truly engage attendees.</p>
+        </div>
+        <div class="col-12" role="group" aria-label="Featured services">
+            <ul class="main-five five-solution clearfix">
+                <div class="five-col">
+                    <div class="five-col-inner">
+                        <figure class="five-images">
+                            <img loading="lazy"
+                                src="https://www.vfairs.com/wp-content/uploads/2023/03/Event-Registration-_-Ticketing.png"
+                                alt="Screenshot of Event Registration & Ticketing platform">
+                            <figcaption class="sr-only">Event Registration &amp; Ticketing</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="five-col">
+                    <div class="five-col-inner">
+                        <figure class="five-images">
+                            <img loading="lazy"
+                                src="https://www.vfairs.com/wp-content/uploads/2023/03/Virtual-Event-Platform-1.png"
+                                alt="Screenshot of vFair's virtual event platform">
+                            <figcaption class="sr-only">Virtual Event Platform</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="five-col">
+                    <div class="five-col-inner">
+                        <figure class="five-images">
+                            <img loading="lazy"
+                                src="https://www.vfairs.com/wp-content/uploads/2023/03/Onsite-Event-Solutions.png"
+                                alt="Screenshot of Onsite Event Solutions">
+                            <figcaption class="sr-only">Onsite Event Solutions</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="five-col">
+                    <div class="five-col-inner">
+                        <figure class="five-images">
+                            <img loading="lazy"
+                                src="https://www.vfairs.com/wp-content/uploads/2023/03/Branded-Event-Mobile-App.png"
+                                alt="Screenshot of Branded Event Mobile App">
+                            <figcaption class="sr-only">Branded Event Mobile App</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="five-col">
+                    <div class="five-col-inner">
+                        <figure class="five-images">
+                            <img loading="lazy"
+                                src="https://www.vfairs.com/wp-content/uploads/2023/03/Event-Analytics.png"
+                                alt="Screenshot of Event Analytics platform">
+                            <figcaption class="sr-only">Event Analytics</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="five-col">
+                    <div class="five-col-inner">
+                        <figure class="five-images">
+                            <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2023/03/Integrations.png"
+                                alt="Screenshot of Integrations platform">
+                            <figcaption class="sr-only">Integrations</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="five-col">
+                    <div class="five-col-inner">
+                        <figure class="five-images">
+                            <img loading="lazy"
+                                src="https://www.vfairs.com/wp-content/uploads/2023/03/Customer-Support.png"
+                                alt="Screenshot of Customer Support platform">
+                            <figcaption class="sr-only">Customer Support</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="row">
+            <section class="logo-header">
+                <h2>1400+ Ecstatic Customers Can’t Be Wrong</h2>
+            </section>
+            <div class="sem-g2-inner-list slick-slide slick-current slick-active" data-slick-index="0"
+                aria-hidden="false" tabindex="0" style="width: 216px;">
+                <figure>
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/g2-min.png"
+                        alt="A G2 review for vFairs">
+                    <figcaption class="sr-only">G2 Review for vFairs</figcaption>
+                </figure>
+                <p id="review1">vFairs is a very interactive platform for all audiences. I love that the support is
+                    quick but of consistently high quality, especially when things get extremely busy.
+                    vFairs is fully customizable, and the team works hard to ensure good alignment with your
+                    organization's brand.
+                    Our programme manager was extremely helpful from the start to finish.
+                </p>
+                <h6>Abrahim (Danny) S.</h6>
+                <span>Associate Fellow</span>
+            </div>
+            <div class="sem-g2-inner-list slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                tabindex="0" style="width: 216px;">
+                <figure>
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/g2-min.png"
+                        alt="A G2 review for vFairs">
+                    <figcaption class="sr-only">G2 Review for vFairs</figcaption>
+                </figure>
+                <p id="review2">vFairs took what we thought was impossible and turned it into the best experience we
+                    could have asked for. We heard wonderful reviews from all of our attendees about their overall
+                    experience.</p>
+                <h6>Emily A.</h6>
+                <span>Director, Alignment</span>
+            </div>
+            <div class="sem-g2-inner-list slick-slide slick-active" data-slick-index="2" aria-hidden="false"
+                tabindex="0" style="width: 216px;">
+                <figure>
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/capterra-1.png"
+                        alt="A review for vFairs on Capterra">
+                    <figcaption class="sr-only">Capterra Review for vFairs</figcaption>
+                </figure>
+                <p id="review3">From our executive team to our customers, everyone was impressed with the final product.
+                    Thanks to the VFairs team for helping us hit a homerun. The team was great to work with and even
+                    offered support during our event for our customers.</p>
+                <h6>Daniel M.</h6>
+                <span>Corporate Director of IT</span>
+            </div>
+            <div class="sem-g2-inner-list slick-slide slick-active" data-slick-index="3" aria-hidden="false"
+                tabindex="0" style="width: 216px;">
+                <figure>
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/g2-min.webp"
+                        alt="A G2 review for vFairs">
+                    <figcaption class="sr-only">G2 Review for vFairs</figcaption>
+                </figure>
+                <p id="review4">This was our second year using vFAIRS for our event and both years were a huge success.
+                    Our attendees were impressed with the platform.</p>
+                <h6>Rachel B</h6>
+                <span>Project Manager</span>
+            </div>
+            <div class="sem-g2-inner-list slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1"
+                style="width: 216px;">
+                <figure>
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/capterra-1.webp"
+                        alt="A review for vFairs on Capterra">
+                    <figcaption class="sr-only">Capterra Review for vFairs</figcaption>
+                </figure>
+                <p id="review5">The Vfairs team was awesome! They were so helpful and willing to assist us whenever they
+                    could. I highly recommend this platform.</p>
+                <h6>Alan D.</h6>
+                <span>Digital Marketing Analyst</span>
+            </div>
+            <div class="sem-g2-inner-list slick-slide slick-cloned" data-slick-index="5" aria-hidden="true"
+                tabindex="-1" style="width: 216px;">
+                <figure>
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/g2-min.png"
+                        alt="A G2 review for vFairs">
+                    <figcaption class="sr-only">G2 Review for vFairs</figcaption>
+                </figure>
+                <p id="review6">vFairs is a very interactive platform for all audiences. I love that the support is
+                    quick but of consistently high quality, especially when things get extremely busy. vFairs is fully
+                    customizable, and the team works hard to ensure good alignment with your organization's brand. Our
+                    programme manager was extremely helpful from the start to finish.</p>
+                <h6>Abrahim (Danny) S.</h6>
+                <span>Associate Fellow</span>
+            </div>
+            <div class="sem-g2-inner-list slick-slide slick-cloned" data-slick-index="6" aria-hidden="true"
+                tabindex="-1" style="width: 216px;">
+                <figure>
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/g2-min.png"
+                        alt="A G2 review for vFairs">
+                    <figcaption class="sr-only">G2 Review for vFairs</figcaption>
+                </figure>
+                <p id="review7">vFairs took what we thought was impossible and turned it into the best experience we
+                    could have asked for. We heard wonderful reviews from all of our attendees about their overall
+                    experience.</p>
+                <h6>Emily A.</h6>
+                <span>Director, Alignment</span>
+            </div>
+            <div class="sem-g2-inner-list slick-slide slick-cloned" data-slick-index="7" aria-hidden="true"
+                tabindex="-1" style="width: 216px;">
+                <figure>
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/capterra-1.png"
+                        alt="A review for vFairs on Capterra">
+                    <figcaption class="sr-only">Capterra Review for vFairs</figcaption>
+                </figure>
+                <p id="review8">From our executive team to our customers, everyone was impressed with the final product.
+                    Thanks to the VFairs team for helping us hit a homerun. The team was great to work with and even
+                    offered support during our event for our customers.</p>
+                <h6>Daniel M.</h6>
+                <span>Corporate Director of IT</span>
+            </div>
+            <div class="tab-content-logo  g2-new-logos clearfix sem-g2--logos" role="contentinfo">
+                <div id="29920" class="inner-logo" aria-label="Capterra logo">
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2023/03/capterra-4.8.svg"
+                        alt="Capterra Logo 4.8 stars rating">
+                </div>
+                <div id="23166" class="inner-logo" aria-label="SourceForge logo">
+                    <img loading="lazy"
+                        src="https://www.vfairs.com/wp-content/uploads/2022/04/customer-love-sourceforge-badge-2.svg"
+                        alt="SourceForge's Customer Love Badge">
+                </div>
+                {% comment %} <div id="29013" class="inner-logo" aria-label="Event Management Platforms Leader logo">
+                    <img loading="lazy"
+                        src="https://www.vfairs.com/wp-content/uploads/2023/06/EventManagementPlatforms_Leader_Leader.svg"
+                        alt="Event Management Platforms Leader Logo">
+                </div> {% endcomment %}
+                <div id="23164" class="inner-logo" aria-label="GetApp logo">
+                    <img loading="lazy"
+                        src="https://www.vfairs.com/wp-content/uploads/2022/04/getapp-leader-2021-1-2.svg"
+                        alt="GetApp 2021 Leader Logo">
+                </div>
+                <div id="23163" class="inner-logo" aria-label="SourceForge Top Performer logo">
+                    <img loading="lazy"
+                        src="https://www.vfairs.com/wp-content/uploads/2022/04/top-performer-summer-white-sourceforge-2.svg"
+                        alt="SourceForge Top Performer Summer Logo">
+                </div>
+                <div id="23162" class="inner-logo" aria-label="User Love logo">
+                    <img loading="lazy" src="https://www.vfairs.com/wp-content/uploads/2022/04/user-love-2.svg"
+                        alt="User Love Logo">
+                </div>
+            </div>
+        </div>
+        <div>
+            <section class="request-a-demo-section">
+                <div class="row">
+                    <h2>Ready to Host Game Changing Events?</h2>
+                    <p>Join the thousands of organizations worldwide using vFairs. Create epic event experiences for
+                        your audiences of all sizes, whether it's 50, 500 or 10,000+</p>
+                    <a href="#solution-contact_us" title="Contact vFairs" aria-label="Contact Sales" role="button"
+                        class="btn btn-md btn-bg-white" id="requestADemo" tabindex="0">Contact Sales</a>
+                </div>
+            </section>
+        </div> -->
+    </main>
+</body>
+
+</html>

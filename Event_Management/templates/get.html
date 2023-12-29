@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    /* Style the navigation bar */
+    nav {
+        background-color: #f58e11;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: bold;
+    }
+
+    .navbar a.active {
+        border-bottom: 2px solid #fff;
+    }
+
+    /* Style the event section */
+    .event-section {
+        text-align: center;
+        padding: 20px;
+    }
+
+    /* Style the event section title */
+    .event-section h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    /* Style the list of events */
+    .event-section ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Style each event item */
+    .event-section li {
+        width: 300px;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        text-align: left;
+    }
+
+    /* Style event titles */
+    .event-section li h2 {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    /* Style event images */
+    .event-section li img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    /* Style event details */
+    .event-section li button {
+        color: #0a0a0a;
+        background-color: rgb(238, 132, 12);
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .event-section li button a {
+        color: #0a0a0a;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="/" class="active">Home</a>
+            <a href="/events">Events</a>
+            <a href="/about">About</a>
+            <a href="/booking">Booking</a>
+            <a href="/contact">Contact</a>
+            <a href="/login">Login</a>
+            <a href="/signup">Signup</a>
+        </div>
+    </nav>
+    <div class="event-section">
+        <h1>Our Events</h1>
+        <ul>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get1.jpeg" %}">
+                <button><a type="button" href="{% url 'signup'%}">Book</a></button>
+            </li>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get2.jpeg" %}">
+                <button><a type="button" href="{% url 'signup'%}">Book</a></button>
+            </li>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get3.jpeg" %}">
+                <button><a type="button" href="{% url 'signup'%}">Book</a></button>
+            </li>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get4.jpeg" %}">
+                <button><a type="button" href="{% url 'signup'%}">Book</a></button>
+            </li>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get5.jpeg" %}">
+               <button><a type="button" href="{% url 'signup'%}">Book</a></button>    
+            </li>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get6.jpeg" %}">
+               <button><a type="button" href="{% url 'signup'%}">Book</a></button>    
+            </li>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get7.jpeg" %}">
+                <button><a type="button" href="{% url 'signup'%}">Book</a></button>
+            </li>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get8.jpeg" %}">
+                <button><a type="button" href="{% url 'signup'%}">Book</a></button>
+            </li>
+            <li>
+                <h2>Get Together</h2>
+                <img src="{% static "images/get9.jpeg" %}">
+                <button><a type="button" href="{% url 'signup'%}">Book</a></button>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

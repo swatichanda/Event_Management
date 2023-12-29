@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+</head>
+<style>
+/* Reset some default browser styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color:#f58e11;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid #fff;
+}
+
+/* Style the main content section */
+.main {
+    padding: 70px;
+}
+
+.about-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 8%;
+    margin-left: 18%;
+    margin-right: 15%;
+    height: 70%;
+    width: 60%;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+</style>
+<body>
+        <nav>
+            <div class="navbar">
+                <a href="/" class="active">Home</a>
+                <a href="/events">Events</a>
+                <a href="/about">About</a>
+                <a href="/booking">Booking</a>
+                <a href="/contact">Contact</a>
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+            </div>
+        </nav>    
+    <main>
+        <section class="about-section">
+            <h1>About Our Event Management System</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet odio eget feugiat bibendum.
+                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla facilisi.
+                In nec velit non ex laoreet ultrices. Suspendisse nec justo urna. Integer rhoncus, ante non lacinia
+                malesuada, nisl dui laoreet turpis, ac volutpat odio eros a purus.
+            </p>
+            <p>
+                Fusce gravida odio sed libero efficitur, in fermentum odio tristique. In hac habitasse platea dictumst.
+                Fusce sit amet velit eu nisi pharetra bibendum id quis metus. Donec non felis in libero malesuada aliquet.
+                Vestibulum hendrerit, dolor nec facilisis ultrices, ante nisl tristique velit, in ullamcorper justo quam eu
+                ligula.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
